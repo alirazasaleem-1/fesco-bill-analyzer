@@ -28,7 +28,7 @@ if st.button("Analyze Bill"):
 
         with st.spinner("Fetching bill..."):
 
-            html = get_bill(ref_no)
+            html = get_bill(ref_no.strip())
             bill_data = parse_bill(html)
 
             st.write(bill_data)
