@@ -11,7 +11,7 @@ def get_bill(ref_no):
 
     url = "https://bill.pitc.com.pk/fescobill"
 
-    response = session.get(url, timeout = 10)
+    response = session.get(url, timeout = 30)
 
     soup = BeautifulSoup(response.text, "html.parser")
 
@@ -40,7 +40,7 @@ def get_bill(ref_no):
     response = session.post(
     url,
     data=data,
-    timeout=10
+    timeout=30
     )
 
     print("STATUS:", response.status_code)
